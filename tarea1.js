@@ -35,7 +35,9 @@ class ProductManager {
     }
   }
   
+  
   // Ejemplo de uso
+
   const productManager = new ProductManager();
   
   console.log(productManager.getProducts()); // []
@@ -47,20 +49,18 @@ class ProductManager {
     thumbnail: 'Sin imagen',
     code: 'abc123',
     stock: 25,
-  }); // Product "producto prueba" added with id 1
+  }); 
   
-  console.log(productManager.getProducts()); // [{id: 1, title: "producto prueba", description: "Este es un producto prueba", price: 200, thumbnail: "Sin imagen", code: "abc123", stock: 25}]
-  
+  console.log(productManager.getProducts()); 
   productManager.addProduct({
     title: 'otro producto',
     description: 'Este es otro producto',
     price: 100,
     thumbnail: 'Otra imagen',
-    code: 'abc123', // Error: Product with the same code already exists
+    code: 'abc123',
     stock: 10,
   }); 
   
-  console.log(productManager.getProductById(2)); // Error: Product not found
+  console.log(productManager.getProductById(2));
   
-  console.log(productManager.getProductById(1)); // {id: 1, title: "producto prueba", description: "Este es un producto prueba", price: 200, thumbnail: "Sin imagen", code: "abc123", stock: 25}
-  
+  console.log(productManager.getProductById(1));
